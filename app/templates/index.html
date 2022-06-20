@@ -1,9 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../static/bg.css">
     <link rel="stylesheet" href="../static/main.css">
     
@@ -71,23 +68,19 @@
    
 
     </script>
-    <title>test successful</title>
+    <title>Summary</title>
 </head>
 
-<ul class="background">
-    <li></li>
-    <li></li>
-    <li></li>
-    
+
     <body>
-        
-        
-        
+    
         
         <div class="grid-container">
             
             <div class="grid-item ">
-                <p>Enter the URL of the video:</p>
+                <h1>Welcome to Summary</h1>
+                <p>this app uses a convolutional neural network to generate a summary for a youtube video</p>
+                <p>Notes:<br> -The audio of the video has to be english <br> -The video should have transcript enabled <br> -This might take a few minutes depending on the length of the transcript</p>
                 <!-- <input type="text" id="url" name="fname" class="in"><br> -->
                 <label class="field field_v3">
                     <input class="field__input" placeholder="e.g. https://www.youtube.com/watch?v=i5PtaCJJFjw" id="url">
@@ -99,17 +92,17 @@
                 <button class="button-29" role="button" onclick="add()">Generate Summary</button>
                 
             </div>
-            <div class="grid-item grid-item-3">
+            <div class="grid-item">
                 <div id="loading"></div>
-                <p><strong>Summary:</strong></p>
+                
                 <p id="enter"></p>
             </div>
         </div>
 
         
-    
+        
     </body>
-</ul>
+
 
 
  
