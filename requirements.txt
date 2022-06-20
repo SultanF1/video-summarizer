@@ -1,2 +1,5 @@
 gunicorn
 flask
+Flask_Cors==3.0.10
+transformers==4.20.0
+youtube_transcript_api==0.4.4

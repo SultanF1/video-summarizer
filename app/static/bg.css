@@ -1,0 +1,59 @@
+@keyframes animate {
+    0%{
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        border-radius: 0;
+    }
+    100%{
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+        border-radius: 50%;
+    }
+}
+
+.background {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    background: #020a36;
+    overflow: hidden;
+}
+.background li {
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    animation: animate 43s linear infinite;
+}
+
+
+
+
+.background li:nth-child(0) {
+    left: 9%;
+    width: 41px;
+    height: 41px;
+    bottom: -41px;
+    animation-delay: 1s;
+}
+.background li:nth-child(1) {
+    left: 45%;
+    width: 27px;
+    height: 27px;
+    bottom: -27px;
+    animation-delay: 3s;
+}
+.background li:nth-child(2) {
+    left: 74%;
+    width: 10px;
+    height: 10px;
+    bottom: -10px;
+    animation-delay: 8s;
+}
+
