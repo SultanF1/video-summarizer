@@ -2,7 +2,7 @@ from youtube_transcript_api import YouTubeTranscriptApi
 from transformers import pipeline
 from flask import Flask, request, jsonify,render_template
 from flask_cors import CORS
-
+import requests
 import transformers
 
 
@@ -60,9 +60,19 @@ def generate_transcript(url):
 def getME():
     url = request.get_json()['mes']
     print(url)
-    summarization = pipeline(model='sshleifer/distilbart-cnn-12-6')
-    res = summarization(generate_transcript(url), truncation=True)[0]['summary_text']
+    API_URL = "https://api-inference.huggingface.co/models/sshleifer/distilbart-cnn-12-6"
+    def query(payload):
+        response = requests.post(API_URL, json=payload)
+        return response.json()
+	
+    output = query({
+        "inputs": generate_transcript(url),
+    })
+
+    res = output[0]['summary_text']
     print(res)
+    
+    
     return jsonify(res)
 
 
