@@ -11,12 +11,12 @@
   "ft";
   border: 2px solid black;
   grid-gap: 20px;
-  
+  opacity: 1;
 }
 
 .mainbox{
   
-  
+  opacity: 1;
   justify-content: center;
   
   
@@ -27,7 +27,9 @@
   
 }
 
-
+body,p,h1{
+  font-family: monospace;
+}
 
 
 
@@ -144,8 +146,9 @@ footer{
   
   .grid-container {
     
-    padding: 20px;
-    width: 100%;
+    /* padding: 120px; */
+    /* width: 2fr; */
+    grid-template-columns: auto;
   }
   
   .grid-item {
